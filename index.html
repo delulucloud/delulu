@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELULU | $DLU - The Solulu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #ffc2d1;
+            --blue: #bde0fe;
+            --white: rgba(255, 255, 255, 0.8);
+            --dark-pink: #fb6f92;
+            --glass: rgba(255, 255, 255, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(-45deg, #fbcfe8, #cffafe, #e0aaff, #fbcfe8);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navbar */
+        nav {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(15px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .logo-nav { font-weight: 700; font-size: 1.8rem; color: var(--dark-pink); text-shadow: 2px 2px white; }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #444;
+            margin-left: 25px;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover { color: var(--dark-pink); }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+        }
+
+        .hero img {
+            width: 350px;
+            max-width: 90%;
+            border-radius: 60px;
+            box-shadow: 0 30px 60px rgba(251, 111, 146, 0.2);
+            animation: float 5s ease-in-out infinite;
+            margin-bottom: 40px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(2deg); }
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            color: white;
+            line-height: 1;
+            text-shadow: 0 10px 20px rgba(251, 111, 146, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .ticker-badge {
+            background: white;
+            padding: 8px 25px;
+            border-radius: 50px;
+            color: var(--dark-pink);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background: var(--dark-pink);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 15px 30px rgba(251, 111, 146, 0.4);
+            display: inline-block;
+        }
+
+        .btn:hover { transform: scale(1.1) rotate(-2deg); background: #ff8fab; }
+
+        /* Sections */
+        .container { max-width: 1100px; margin: 0 auto; padding: 100px 20px; }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 60px 40px;
+            border-radius: 50px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        h2 { font-size: 3rem; color: var(--dark-pink); margin-bottom: 30px; }
+
+        .lore-text { font-size: 1.2rem; text-align: left; color: #555; }
+
+        /* Tokenomics Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .grid-item {
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            transition: 0.3s;
+        }
+
+        .grid-item:hover { transform: translateY(-10px); }
+
+        .grid-item h3 { color: var(--dark-pink); font-size: 1.8rem; margin-bottom: 10px; }
+
+        /* Roadmap */
+        .roadmap-step {
+            text-align: left;
+            margin-bottom: 40px;
+            padding-left: 30px;
+            border-left: 4px dashed var(--dark-pink);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 100px 20px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .social-links a {
+            font-size: 2rem;
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--dark-pink);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .hero img { width: 250px; }
+            nav { padding: 15px 20px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-nav">DELULU</div>
+        <div class="nav-links">
+            <a href="#lore">Lore</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#manifest">Roadmap</a>
+            <a href="https://x.com" style="background: white; padding: 10px 20px; border-radius: 20px;">JOIN X</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="ticker-badge">$DLU</div>
+        <img src="logo.jpeg" alt="Delulu Pink Glasses">
+        <h1>Reality is a Glitch.<br>Stay Delulu.</h1>
+        <p>In a world of mid vibes and boring charts, we chose the cloud. $DLU isn't just a coin—it's a massive, pink, fluffy middle finger to the matrix.</p>
+        <a href="https://robinfun.live/create" class="btn">MANIFEST NOW</a>
+    </header>
+
+    <div class="container">
+        <!-- Section: LORE -->
+        <section id="lore" class="glass-card">
+            <h2>The Lore</h2>
+            <div class="lore-text">
+                <p>Let's be real: your 9-to-5 is a plot hole. The economy? Scripted by NPCs. The only way to win in 2026 is to exit the simulation. We aren't "investing," we are <strong>manifesting</strong>.</p>
+                <br>
+                <p>Delulu Coin was born in the deep clouds of the internet for the dreamers, the "for the plot" girlies, and the degen chads who know that <em>Delulu is the only Solulu</em>. If you think we are going to a 1 Billion market cap... you're absolutely right. That's the power of the pink glasses.</p>
+            </div>
+        </section>
+
+        <!-- Section: TOKENOMICS -->
+        <section id="tokenomics" class="glass-card">
+            <h2>Delulunomics</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <h3>1 Billion</h3>
+                    <p>Total Supply (Plenty for everyone to be a whale)</p>
+                </div>
+                <div class="grid-item">
+                    <h3>0% Tax</h3>
+                    <p>No fees. We only take your bad vibes away.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>100% LP</h3>
+                    <p>Liquidity burned. No rugging the cloud.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>∞ Aura</h3>
+                    <p>The more you hold, the harder you manifest.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: ROADMAP -->
+        <section id="manifest" class="glass-card">
+            <h2>The Manifestation Map</h2>
+            
+            <div class="roadmap-step">
+                <h3>Phase 1: The Denial</h3>
+                <p>Launch on Solana. Ignore everyone who says "this is just a meme." We know the truth. Pink glasses for everyone. Global trend on X.</p>
+            </div>
+
+            <div class="roadmap-step">
+                <h3>Phase 2: The Delusion</h3>
+                <p>CEX listings. Community-driven mental health (by making everyone rich). $DLU becomes a lifestyle. We stop checking prices because we know it's going up.</p>
+            </div>
+
+            <div class="roadmap-step">
+                <h3>Phase 3: Transcendance</h3>
+                <p>The entire world puts on pink glasses. Reality finally breaks. $DLU becomes the official currency of the simulation. We buy the moon and paint it pink.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <h2>Are you in or are you real?</h2>
+        <p style="margin-bottom: 30px;">"I'm not delusional, I'm just ahead of the plot."</p>
+        <div class="social-links">
+            <a href="#">Telegram</a>
+            <a href="#">X (Twitter)</a>
+            <a href="#">DexScreener</a>
+        </div>
+        <p style="margin-top: 50px; font-size: 0.8rem; opacity: 0.6;">
+            Disclaimer: $DLU is a memecoin with zero utility. Don't invest money you need for therapy. Manifest responsibly.
+        </p>
+    </footer>
+
+</body>
+</html>
